@@ -3,11 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 <title>강환기&김진숙 결혼합니다.</title>
 <script src="./js/bsjs.js"></script>
 <script>
 bs(function(){
+  bs.Dom('body').S('margin','0');
 
 var game = function(len, size, img) {
   var moving,bx,by,lastswap,blocks,
@@ -98,9 +99,7 @@ var game = function(len, size, img) {
   init();
 };
 
-var imguri = ['./img/0', bs.rand(1,9), '.jpg'];
-
-game(3,300,imguri.join(''));
+game(3,300,['./img/0', bs.rand(1,9), '.jpg'].join(''));
 
 });
 </script>
