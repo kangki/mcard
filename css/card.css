@@ -1,0 +1,15 @@
+.calendar {
+font-family:'맑은 고딕';
+font-size:1.3em;
+text-align:center;
+}
+
+.month {
+font-size:1.6em;
+text-align:right;
+}
+
+.d-day {
+background-color:#fcc;
+color:#f33;
+}
