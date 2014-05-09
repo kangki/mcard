@@ -5,8 +5,10 @@ text-align:center;
 }
 
 .month {
-font-size:1.5em;
-text-align:right;
+padding-left:10px;
+font-size:1.8em;
+font-weight:bold;
+text-align:left;
 }
 
 .d-day {
