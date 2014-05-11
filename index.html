@@ -1,49 +1,72 @@
 <!DOCTYPE html>
 <html lang='ko'>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>강환기 김진숙 결혼합니다.</title>
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
-    <link href="./css/card.css" rel="stylesheet">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view tde page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <script src="./js/jquery-1.10.1.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-  </head>
-  <body>
-  <div class='container'>
-    <div class='row'>
-      <div class='col-xs-12'><img class='img-responsive' src='./img/청첩장01.png' /></div>
-      <div class='col-xs-12'>
-        <div class='calendar'>
-          <div class='month'>5月</div>
-          <div>
-            <table class='table day'>
-              <tr><td>일</td><td>월</td><td>화</td><td>수</td><td>목</td><td>금</td><td>토</td></tr>
-              <tr><td></td><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td></tr>
-              <tr><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
-              <tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr>
-              <tr><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td></tr>
-              <tr><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td class='d-day'>31</td></tr>
-            </table>
-          </div>
+<head>
+<meta charset='utf-8'>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>강환기 김진숙 결혼합니다.</title>
+<link href="./css/bootstrap.min.css" rel="stylesheet">
+<link href="./css/card.css" rel="stylesheet">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view tde page via file:// -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script src="./js/jquery-1.10.1.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+  var imgAmount=10;
+  function src(){
+    var nm = ((new Date).getMilliseconds() % imgAmount + 1);
+    return (nm < 10 ? './img/0'+nm : './img/'+nm) + '.jpg';
+  }
+  function genImgs(){
+    var i=0,v,map={};
+    do{
+      v = src();
+      if(map[v]) continue;
+
+      map[v] = {};
+      $('#album' + i).attr('src',v);
+      i++;
+    }while(i < 5);
+  }
+  genImgs();
+});
+</script>
+</head>
+<body>
+<div class='container'>
+  <div class='row'>
+    <div class='col-xs-12'><img class='img-responsive' src='./img/청첩장01.png' /></div>
+    <div class='col-xs-12'>
+      <div class='calendar'>
+        <div class='month'>5月</div>
+        <div>
+          <table class='table day'>
+            <tr><td>일</td><td>월</td><td>화</td><td>수</td><td>목</td><td>금</td><td>토</td></tr>
+            <tr><td></td><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td></tr>
+            <tr><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+            <tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr>
+            <tr><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td></tr>
+            <tr><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td class='d-day'>31</td></tr>
+          </table>
         </div>
       </div>
-      <div class='col-xs-12'><img class='img-responsive' src='./img/청첩장02.png' /></div>
-      <div class='col-xs-12' id='album01'><img class='img-responsive' src='./img/01.jpg'/></div>
-      <div class='col-xs-12' id='album02'><img class='img-responsive' src='./img/02.jpg'/></div>
-      <div class='col-xs-12' id='album03'><img class='img-responsive' src='./img/03.jpg'/></div>
-      <div class='col-xs-12' id='album04'><img class='img-responsive' src='./img/04.jpg'/></div>
-      <div class='col-xs-12' id='album05'><img class='img-responsive' src='./img/05.jpg'/></div>
-      <div class='col-xs-12'><img class='img-responsive' src='./img/청첩장03.png' /></div>
-      <div class='col-xs-12'><img class='img-responsive' src='./img/청첩장04.png' /></div>
     </div>
+    <div class='col-xs-12'><img class='img-responsive' src='./img/청첩장02.png' /></div>
+
+    <div class='col-xs-12'><img id='album1' class='img-responsive' src='./img/01.jpg'/></div>
+    <div class='col-xs-12'><img id='album2' class='img-responsive' src='./img/02.jpg'/></div>
+    <div class='col-xs-12'><img id='album3' class='img-responsive' src='./img/03.jpg'/></div>
+    <div class='col-xs-12'><img id='album4' class='img-responsive' src='./img/04.jpg'/></div>
+    <div class='col-xs-12'><img id='album5' class='img-responsive' src='./img/05.jpg'/></div>
+
+    <div class='col-xs-12'><img class='img-responsive' src='./img/청첩장03.png' /></div>
+    <div class='col-xs-12'><img class='img-responsive' src='./img/청첩장04.png' /></div>
   </div>
-  </body>
+</div>
+</body>
 </html>
