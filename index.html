@@ -1,5 +1,30 @@
 <!DOCTYPE html>
 <html lang='ko'>
+<!--
+  오늘도 결혼준비에 바쁩니다.
+  청첩장도 돌려야 하고요.
+  많은 분들을 만나서 축하도 받고 싶고요.
+  "여보야 회사 그만둬! 내가 먹여살려줄께!" 라고 말하고도 싶고요.
+  결혼식/신혼여행/신혼집 아직 완벽하게 준비된 것이 하나도 없습니다.
+  
+  물론 저 자신도 아직 한 가정의 가장으로 준비가 되었다고 자신있게 말하지 못 할 것 같습니다.
+  결혼 준비를 시작하면서 더 열심히 성당에 나가고 있습니다.
+  아!... 저는 성당에 다닙니다.
+  정말 다닙니다.
+  그냥 얌전하게 다닙니다.
+  성명은 프란치스코.
+  2014년 현재 교황님 과 같은 이름입니다.(와우!)
+  
+  어제 성당에서 신부님이 이렇게 말씀하시더군요.
+  우리 세상이 아직 살만한 것은 20%도 되지않는 성실하고 아름다운 사람들 덕분이라고요.
+  그리고 그들은 대가없이 조용하고 묵묵히 성실하고 아름다운 삶을 살아간다고 합니다.
+  그래서 우리 성당에 나오는 신자분들은 세상을 아름답게 만들어나가는 20%의 사람이 되었으면 한다고요.
+  
+  한번씩 신부님들은 멋있는 말을 하시곤 합니다.
+  그래서 저도 어제는 세상을 아름답게 만드는 작은 사람이 되었으면 하고 기도를 해보았습니다.
+  그리고 다만 노력할 뿐입니다.
+  김진숙씨를 사랑하고 온정성을 다하여 아껴주고 봄날의 바람처럼 부드럽게 ... 살아간다고 말입니다.
+-->
 <head>
 <meta charset='utf-8'>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -7,66 +32,47 @@
 <title>강환기 김진숙 결혼합니다.</title>
 <link href="./css/bootstrap.min.css" rel="stylesheet">
 <link href="./css/card.css" rel="stylesheet">
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view tde page via file:// -->
-<!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
 <script src="./js/jquery-1.10.1.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
-<script>
-$(document).ready(function(){
-  var imgAmount=10;
-  function src(){
-    var nm = ((new Date).getMilliseconds() % imgAmount + 1);
-    return (nm < 10 ? './img/0'+nm : './img/'+nm) + '.jpg';
-  }
-  function genImgs(){
-    var i=0,v,map={};
-    do{
-      v = src();
-      if(map[v]) continue;
-
-      map[v] = {};
-      $('#album' + i).attr('src',v);
-      i++;
-    }while(i < 5);
-  }
-  genImgs();
-});
-</script>
+<script src="./js/mcard.js"></script>
 </head>
 <body>
 <div class='container'>
-  <div class='row'>
-    <div class='col-xs-12'><img class='img-responsive' src='./img/청첩장01.png' /></div>
-    <div class='col-xs-12'>
-      <div class='calendar'>
-        <div class='month'>5月</div>
-        <div>
-          <table class='table day'>
-            <tr><td>일</td><td>월</td><td>화</td><td>수</td><td>목</td><td>금</td><td>토</td></tr>
-            <tr><td></td><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td></tr>
-            <tr><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
-            <tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr>
-            <tr><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td></tr>
-            <tr><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td class='d-day'>31</td></tr>
-          </table>
-        </div>
-      </div>
+<div class='row'>
+
+<div class='col-xs-12'><img class='img-responsive' src='./img/청첩장01.png' /></div>
+
+<div class='col-xs-12'>
+  <div class='calendar'>
+    <div class='month'>5月</div>
+    <div>
+      <table class='table day'>
+        <tr><td>일</td><td>월</td><td>화</td><td>수</td><td>목</td><td>금</td><td>토</td></tr>
+        <tr><td></td><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td></tr>
+        <tr><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+        <tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr>
+        <tr><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td></tr>
+        <tr><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td class='d-day'>31</td></tr>
+      </table>
     </div>
-    <div class='col-xs-12'><img class='img-responsive' src='./img/청첩장02.png' /></div>
-
-    <div class='col-xs-12'><img id='album1' class='img-responsive' src='./img/01.jpg'/></div>
-    <div class='col-xs-12'><img id='album2' class='img-responsive' src='./img/02.jpg'/></div>
-    <div class='col-xs-12'><img id='album3' class='img-responsive' src='./img/03.jpg'/></div>
-    <div class='col-xs-12'><img id='album4' class='img-responsive' src='./img/04.jpg'/></div>
-    <div class='col-xs-12'><img id='album5' class='img-responsive' src='./img/05.jpg'/></div>
-
-    <div class='col-xs-12'><img class='img-responsive' src='./img/청첩장03.png' /></div>
-    <div class='col-xs-12'><img class='img-responsive' src='./img/청첩장04.png' /></div>
   </div>
+</div>
+
+<div class='col-xs-12'><img class='img-responsive' src='./img/청첩장02.png' /></div>
+
+<div class='col-xs-12'><img id='album1' class='img-responsive' src='./img/01.jpg'/></div>
+<div class='col-xs-12'><img id='album2' class='img-responsive' src='./img/02.jpg'/></div>
+<div class='col-xs-12'><img id='album3' class='img-responsive' src='./img/03.jpg'/></div>
+<div class='col-xs-12'><img id='album4' class='img-responsive' src='./img/04.jpg'/></div>
+<div class='col-xs-12'><img id='album5' class='img-responsive' src='./img/05.jpg'/></div>
+
+<div class='col-xs-12'><img class='img-responsive' src='./img/청첩장03.png' /></div>
+
+<!-- 여기에 딱! 구글맵 들어갔으면 정말 딱 좋았을꺼야? 그렇지? 딱 여기에~ 이건 우리 엄마도 알아! 딱 여기야 여기 -->
+
+<div class='col-xs-12'><img class='img-responsive' src='./img/청첩장04.png' /></div>
+
+</div>
 </div>
 </body>
 </html>
