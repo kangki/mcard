@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset='utf-8'>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>댓글</title>
+<link href="./css/bootstrap.min.css" rel="stylesheet">
+<link href="./css/card.css" rel="stylesheet">
+<script src="./js/jquery-1.10.1.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src='https://cdn.firebase.com/js/client/2.0.4/firebase.js'></script>
+<script>
+$(document).ready(function(){
+  var fb = new Firebase('https://kangki.firebaseio.com/');
+  $('#message').keypress(function (e) {
+    if (e.keyCode == 13) {
+      var name = $('#name').val();
+      var text = $('#message').val();
+      fb.push({name: name, text: text});
+      $('#message').val('');
+    }
+  });
+
+  fb.on('child_added', function(s){
+  	addMessage(s.val());
+  });
+  var num = 1;
+  function addMessage(v){
+  	var text = '<tr><td>';
+  	text 		+= '<h4 class="list-group-item-heading">['+ num +'] '+v.name+'</h4>';
+  	text 		+= '<p class="list-group-item-text">'+v.text+'</p></td></tr>';
+
+  	num += 1;
+
+		$('#view').prepend(text);
+  }
+
+});
+</script>
+</head>
+<body>
+<div class='container'>
+<div class='row'>
+	<div class='col-xs-12'>
+    <div class='month'>축하글 남기기</div>
+
+    <table class='table'>
+    	<thead>
+    		<tr>
+    			<td class='edit'>
+						<div class='input-group'>
+							<span class='input-group-addon'>이름</span>
+							<input type='text' id='name' placeholder='name' class='form-control'>
+						</div>
+						<div class='input-group'>
+							<span class='input-group-addon'>댓글</span>
+							<input type='text' id='message' placeholder='message' class='form-control'>
+						</div>
+						<div class='input-group btn-block'>
+			        <button class="btn btn-success btn-block" type="button">글쓰기</button>
+						</div>
+    			</td>
+    		</tr>
+    	</thead>
+    	<tbody id='view'>
+
+    	</tbody>
+    </table>
+	</div>
+</div>
+</div>
+</body>
+</html>

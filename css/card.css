@@ -15,3 +15,7 @@ text-align:left;
 background-color:#fcc;
 color:#f33;
 }
+
+.edit div {
+	padding:5px;
+}
