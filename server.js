@@ -9,9 +9,9 @@ http.createServer(function(request,response){
 	console.log(pathname);
 
 	if(pathname == '' || pathname == '/')
-		pathname = '/index.html';
+		pathname = '/mcard/index.html';
 
-	var fullpath = path.join(process.cwd(), pathname);
+	var fullpath = path.join(process.cwd().replace('/mcard',''), pathname);
 	var ext = pathname.split('.');
 	ext = ext[ext.length-1] || 'plain';
 
