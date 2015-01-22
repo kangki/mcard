@@ -10,12 +10,18 @@
 
 <script src="/mcard/resource/lib/jquery/jquery.js"></script>
 <script src="/mcard/resource/lib/bootstrap/js/bootstrap.js"></script>
-<script src='/mcard/resource/lib/firebase/firebase.js'></script>
+<script src="/mcard/resource/lib/firebase/firebase.js"></script>
+<script src="/mcard/resource/lib/angular/angular.js"></script>
 
-<script src="/mcard/resource/mcard.js"></script>
+<script src="/mcard/resource/app/app.js"></script>
+
+<script src="/mcard/resource/app/controllers/firebase.js"></script>
+<script src="/mcard/resource/app/controllers/album.js"></script>
+
+<script src="/mcard/resource/app/directives/album.js"></script>
 
 </head>
-<body>
+<body ng-controller="firebaseController">
 <div class='container'>
 <div class='row'>
 
@@ -38,13 +44,7 @@
 </div>
 
 <div class='col-xs-12'><img class='img-responsive' src='/mcard/resource/images/청첩장02.png'></div>
-
-<div class='col-xs-12'><img id='album1' class='img-responsive' src='/mcard/resource/images/01.jpg'></div>
-<div class='col-xs-12'><img id='album2' class='img-responsive' src='/mcard/resource/images/02.jpg'></div>
-<div class='col-xs-12'><img id='album3' class='img-responsive' src='/mcard/resource/images/03.jpg'></div>
-<div class='col-xs-12'><img id='album4' class='img-responsive' src='/mcard/resource/images/04.jpg'></div>
-<div class='col-xs-12'><img id='album5' class='img-responsive' src='/mcard/resource/images/05.jpg'></div>
-
+<div album></div>
 <div class='col-xs-12'><img class='img-responsive' src='/mcard/resource/images/청첩장03.png'></div>
 
 <div class='col-xs-12'><img class='img-responsive' src='/mcard/resource/images/청첩장04.png'></div>
